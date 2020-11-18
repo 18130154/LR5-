@@ -43,7 +43,7 @@
                         echo("Введите дату окончания: <input name='date_e' type='date'/> <br>");
                         
                         $id_0 = "os_select";
-                        echo("<label for='$id_0'>Список разрешенных характеристик: </label>");
+                        echo("<label for='$id_0'>Список характеристик: </label>");
                         echo("<select id='$id_0' name='$id_0'>");
                         echo("<option value=''>--Please choose an option--</option>");
                         while ($row=mysqli_fetch_array($result_0)){

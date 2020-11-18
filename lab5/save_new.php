@@ -14,7 +14,7 @@
                             $dev = htmlentities(mysqli_real_escape_string($link, $_POST['dev']));
                             $num = htmlentities(mysqli_real_escape_string($link, $_POST['num']));
                             if((strlen($name)==0)||(strlen($type)==0)||(strlen($bit)==0)||(strlen($dev)==0)||(strlen($num)==0)){
-                                die("Ошибка значения пусты");
+                                die("Ошибка")
                             }
                             $query = "INSERT INTO $database.$index (id, name, type, bit, dev, num) VALUES (NULL, '$name', '$type', '$bit', '$dev', '$num')";
                             mysqli_query($link, $query) or die("Не могу выполнить запрос!");
@@ -31,7 +31,7 @@
                             $name = htmlentities(mysqli_real_escape_string($link, $_POST['name']));
                             $url = htmlentities(mysqli_real_escape_string($link, $_POST['url']));
                             if((strlen($name)==0)||(strlen($url)==0)){
-                                die("Ошибка значения пусты");
+                                die("Ошибка");
                             }
                             $query = "INSERT INTO $database.$index (id, name, url) VALUES (NULL, '$name', '$url')";
                             mysqli_query($link, $query) or die("Не могу выполнить запрос!");
